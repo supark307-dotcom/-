@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>청운교회 매일 기도</title>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF9FC;--card:#fff;--ink:#10222B;--sub:#5A7480;--brand:#0DB8DB;--line:#CFE6EE;--purple:#5B1DEB;--red:#F2382B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A181E;--card:#12262E;--ink:#E8F6FA;--sub:#8FB0BC;--line:#21404B}}
+:root[data-theme="dark"]{--bg:#0A181E;--card:#12262E;--ink:#E8F6FA;--sub:#8FB0BC;--line:#21404B}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 'Gowun Dodum','Noto Sans KR',system-ui,sans-serif}
+main{max-width:480px;margin:0 auto;padding:20px 18px 48px}
+h1,h2,.hf{font-family:'Gowun Batang',serif;font-weight:700;line-height:1.3}
+h1{font-size:32px;margin:0}
+h2{font-size:22px;margin:0 0 10px}
+.logo{display:flex;align-items:center;gap:14px}
+.ico{width:58px;height:58px;border-radius:14px;background:var(--brand);display:grid;place-items:center;font-size:32px}
+.sub{color:var(--sub);font-size:14px}
+button{font:inherit;cursor:pointer}
+button:focus-visible,textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.big{display:block;width:100%;border:0;border-radius:14px;padding:13px 16px;margin-top:10px;font-size:20px;color:#fff;font-family:'Gowun Batang',serif;font-weight:700}
+.b1{background:var(--purple)}.b2{background:var(--red)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:18px}
+.banner{margin-top:18px;padding:12px 14px;border-radius:12px;background:var(--brand);color:#06232B;font-weight:700}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
+.w{font-size:12px;color:var(--sub);font-weight:500}
+.d{aspect-ratio:1;display:grid;place-items:center;border-radius:50%;font-size:14px}
+.d.a{box-shadow:inset 0 0 0 2px var(--brand)}
+.d.p{background:var(--brand);color:#06232B;font-weight:700}
+.d.t{text-decoration:underline;text-underline-offset:3px}
+.leg{display:flex;gap:16px;margin-top:10px;font-size:13px;color:var(--sub)}
+.leg i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.bd{display:flex;gap:8px}
+.bd div{flex:1;text-align:center;padding:10px 2px;border-radius:12px;background:var(--bg);opacity:.45;font-size:13px}
+.bd div b{display:block;font-size:24px;line-height:1.3}
+.bd .on{opacity:1;outline:2px solid var(--brand)}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.back{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:6px 12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+.chip{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:14px}
+.chip.on{border-color:var(--purple);background:var(--purple);color:#fff}
+textarea{width:100%;min-height:150px;border:2px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);padding:12px;font:inherit;line-height:1.7;resize:vertical}
+.pri{border:0;border-radius:12px;background:var(--purple);color:#fff;padding:12px 20px;font-weight:700;margin-top:10px}
+.red{background:var(--red)}
+.ghost{border:2px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;padding:10px 18px;margin-top:10px}
+.err{color:var(--red);font-size:14px;margin:6px 0 0}
+.item{border-top:1px solid var(--line);padding:12px 0}
+.item:first-child{border-top:0}
+.item p{margin:4px 0;white-space:pre-wrap}
+.tag{display:inline-block;font-size:12px;padding:1px 10px;border-radius:999px;background:var(--bg);color:var(--sub)}
+.del{border:2px solid var(--line);background:transparent;color:var(--red);border-radius:10px;padding:6px 12px;font-size:14px;margin-top:6px}
+.del.ask{background:var(--red);border-color:var(--red);color:#fff}
+.verse{font-family:'Gowun Batang',serif;font-size:22px;line-height:1.8;white-space:pre-wrap;padding:20px 4px 8px;word-break:keep-all}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.empty{color:var(--sub);text-align:center;padding:24px 0}
+
+.card.calbg{background-image:linear-gradient(color-mix(in srgb,var(--card) 80%,transparent),color-mix(in srgb,var(--card) 80%,transparent)),var(--calimg);background-size:cover;background-position:center 42%}
+.cnav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.cb{width:40px;height:40px;border-radius:50%;border:2px solid var(--line);background:var(--card);color:var(--ink);font-size:22px;line-height:1;padding:0}
+.cb:disabled{opacity:.3;cursor:default}
+.calbg{touch-action:pan-y}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+const CAL='data:image/jpeg;base64,<사진데이터_생략>';
+const K='maeil-gido-v1', CATS=['자신을 위한','친구를 위한','그 외'];
+let S={prayers:[],att:[],prayed:{},best:0};
+try{const r=localStorage.getItem(K);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+const ymd=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const today=ymd(new Date());
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function streak(){let n=0,d=new Date();while(S.att.includes(ymd(d))){n++;d.setDate(d.getDate()-1)}return n}
+let newToday=false;
+if(!S.att.includes(today)){S.att.push(today);newToday=true}
+S.best=Math.max(S.best||0,streak());save();
+
+let calOff=0,view='home',cat=CATS[0],draft='',err='',cur=null,doneNow=false,askDel=null;
+
+function cal(){
+  const n=new Date(),b=new Date(n.getFullYear(),n.getMonth()+calOff,1),y=b.getFullYear(),m=b.getMonth(),first=new Date(y,m,1).getDay(),len=new Date(y,m+1,0).getDate();
+  let h='';
+  for(const w of '일월화수목금토')h+='<b class="w">'+w+'</b>';
+  for(let i=0;i<first;i++)h+='<span></span>';
+  for(let d=1;d<=len;d++){
+    const k=ymd(new Date(y,m,d));
+    const c=S.prayed[k]?' p':S.att.includes(k)?' a':'';
+    h+='<span class="d'+c+(k===today?' t':'')+'">'+d+'</span>';
+  }
+  const nav='<div class="cnav"><button class="cb" data-a="cprev" aria-label="이전 달">‹</button><h2 style="margin:0">'+y+'년 '+(m+1)+'월 기록</h2><button class="cb" data-a="cnext" aria-label="다음 달"'+(calOff>=0?' disabled':'')+'>›</button></div>'+(calOff!==0?'<div style="text-align:center"><button class="ghost" style="margin:0 0 8px;padding:4px 14px;font-size:13px" data-a="ctoday">이번 달로</button></div>':'');
+  return nav+'<div class="cal">'+h+'</div><div class="leg"><span><i style="background:var(--brand)"></i>기도한 날</span><span><i style="box-shadow:inset 0 0 0 2px var(--brand)"></i>출석한 날</span></div>';
+}
+
+function home(){
+  const s=streak();
+  const B=[[3,'🌱'],[7,'🕯️'],[14,'⭐'],[30,'👑']];
+  return '<div class="logo"><div class="ico" aria-hidden="true">🙏</div><div><div class="sub" style="font-weight:700;color:var(--brand)">청운교회</div><h1>매일 기도</h1><div class="sub">'+s+'일 연속 출석 · 총 '+S.att.length+'일</div></div></div>'
+  +(newToday?'<div class="banner">오늘 출석 도장을 받았어요.</div>':'')
+  +'<button class="big b1" data-a="write">기도문 작성</button>'
+  +'<button class="big b2" data-a="pray">기도하기</button>'
+  +'<div class="card calbg">'+cal()+'</div>'
+  +'<div class="card"><h2>출석 보상</h2><div class="bd">'
+  +B.map(b=>'<div class="'+(S.best>=b[0]?'on':'')+'"><b>'+b[1]+'</b>'+b[0]+'일 연속</div>').join('')
+  +'</div></div>';
+}
+
+function write(){
+  const list=S.prayers.length?S.prayers.map(p=>
+    '<div class="item"><span class="tag">'+esc(p.cat)+'</span><p>'+esc(p.text)+'</p>'
+    +'<div class="sub">'+(p.count?'기도 '+p.count+'번 · 마지막 '+p.last:'아직 기도하지 않았어요')+'</div>'
+    +'<button class="del'+(askDel===p.id?' ask':'')+'" data-a="del" data-id="'+p.id+'">'+(askDel===p.id?'정말 삭제하려면 한 번 더 누르세요':'기도문 삭제')+'</button></div>').join('')
+    :'<div class="empty">저장한 기도문이 없어요.<br>위에서 첫 기도문을 써 보세요.</div>';
+  return '<div class="top"><button class="back" data-a="home">‹ 홈</button><h2 style="margin:0">기도문 작성</h2></div>'
+  +'<div class="chips" role="group" aria-label="누구를 위한 기도인가요">'
+  +CATS.map(c=>'<button class="chip'+(c===cat?' on':'')+'" data-a="cat" data-c="'+c+'" aria-pressed="'+(c===cat)+'">'+c+'</button>').join('')+'</div>'
+  +'<textarea id="t" placeholder="기도문을 적어 주세요">'+esc(draft)+'</textarea>'
+  +(err?'<p class="err" role="alert">'+err+'</p>':'')
+  +'<button class="pri" data-a="save">기도문 저장</button>'
+  +'<div class="card"><h2>저장한 기도문</h2>'+list+'</div>';
+}
+
+function pick(){
+  const l=S.prayers;
+  if(!l.length){cur=null;return}
+  let c;do{c=l[Math.floor(Math.random()*l.length)]}while(l.length>1&&c.id===cur);
+  cur=c.id;doneNow=false;
+}
+
+function pray(){
+  const top='<div class="top"><button class="back" data-a="home">‹ 홈</button><h2 style="margin:0">기도하기</h2></div>';
+  const p=S.prayers.find(x=>x.id===cur);
+  if(!p)return top+'<div class="card empty">기도문이 아직 없어요.<br><button class="pri" data-a="write">기도문 작성하기</button></div>';
+  return top+'<div class="card"><span class="tag">'+esc(p.cat)+'</span><div class="verse">'+esc(p.text)+'</div>'
+  +(doneNow?'<p><b>오늘 기도를 마쳤어요.</b> 달력에 기도한 날로 표시했어요.</p><div class="row"><button class="pri" data-a="home">홈으로</button><button class="ghost" data-a="again">다른 기도문 뽑기</button></div>'
+  :'<div class="row"><button class="pri red" data-a="done">기도했어요</button><button class="ghost" data-a="again">다른 기도문 뽑기</button></div>')
+  +'<div><button class="del'+(askDel===p.id?' ask':'')+'" data-a="delcur">'+(askDel===p.id?'정말 삭제하려면 한 번 더 누르세요':'이 기도문 삭제')+'</button></div>'
+  +'</div>';
+}
+
+function render(){
+  document.body.style.setProperty('--calimg','url('+CAL+')');
+  document.getElementById('app').innerHTML=view==='home'?home():view==='write'?write():pray();
+  window.scrollTo(0,0);
+}
+
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-a]');if(!t)return;
+  const ta=document.getElementById('t');if(ta)draft=ta.value;
+  const a=t.dataset.a;
+  if(a==='cprev'||a==='cnext'||a==='ctoday'){
+    if(a==='cprev')calOff--;else if(a==='cnext'&&calOff<0)calOff++;else if(a==='ctoday')calOff=0;
+    const y0=window.scrollY;render();window.scrollTo(0,y0);return;
+  }
+  if(a!=='del'&&a!=='delcur')askDel=null;
+  if(a==='delcur'){
+    if(askDel===cur){S.prayers=S.prayers.filter(p=>p.id!==cur);askDel=null;save();pick()}else askDel=cur;
+  }
+  else if(a==='home'){view='home';newToday=false;err='';askDel=null}
+  else if(a==='write'){view='write';err=''}
+  else if(a==='pray'){view='pray';pick()}
+  else if(a==='again'){pick()}
+  else if(a==='cat'){cat=t.dataset.c;render();return}
+  else if(a==='save'){
+    const v=draft.trim();
+    if(!v){err='기도문을 먼저 적어 주세요.';render();return}
+    S.prayers.unshift({id:Date.now(),cat:cat,text:v,count:0,last:''});
+    draft='';err='';save();
+  }
+  else if(a==='del'){
+    const id=Number(t.dataset.id);
+    if(askDel===id){S.prayers=S.prayers.filter(p=>p.id!==id);askDel=null;save()}else askDel=id;
+  }
+  else if(a==='done'){
+    const p=S.prayers.find(x=>x.id===cur);
+    if(p){p.count=(p.count||0)+1;p.last=today;S.prayed[today]=(S.prayed[today]||0)+1;save();doneNow=true}
+  }
+  render();
+});
+let sx=0,sy=0;
+document.addEventListener('touchstart',e=>{if(e.target.closest('.calbg')){sx=e.touches[0].clientX;sy=e.touches[0].clientY}else sx=0},{passive:true});
+document.addEventListener('touchend',e=>{
+  if(!sx||view!=='home')return;
+  const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
+  if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){
+    if(dx>0)calOff--;else if(calOff<0)calOff++;
+    const y0=window.scrollY;render();window.scrollTo(0,y0);
+  }
+  sx=0;
+},{passive:true});
+render();
+</script>
+</body>
+</html>
