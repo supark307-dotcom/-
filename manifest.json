@@ -1,0 +1,26 @@
+{
+  "name": "매일 기도",
+  "short_name": "매일 기도",
+  "description": "청운교회 매일 기도",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EEF9FC",
+  "theme_color": "#0DB8DB",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
